@@ -160,7 +160,8 @@ cython_debug/
 #.idea/
 
 
-2_docker_sql/ny_taxi_postgres_data/
+*_postgres_data
+*/terraform/keys/*
 *.csv
 *.csv.gz
 *.parquet
