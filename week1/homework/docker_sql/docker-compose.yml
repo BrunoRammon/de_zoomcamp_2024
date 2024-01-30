@@ -12,6 +12,8 @@ services:
       -  "./ny_green_taxi_postgres_data:/var/lib/postgresql/data:rw"
     ports:
       - "5433:5432"
+    networks:
+      - backend
   pgadmin:
     image: dpage/pgadmin4
     environment:
@@ -19,3 +21,9 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=root
     ports:
       - "8080:80"
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend

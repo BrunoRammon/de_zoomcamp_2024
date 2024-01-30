@@ -1,6 +1,18 @@
 # initialize docker
 docker compose up
 
+################## running locally ####################
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
+python ingest_data.py \
+  --user=root \
+  --password=root \
+  --host=localhost \
+  --port=5433 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_data \
+  --url=${URL}
+
+############## running inside container ###############
 # build local image from dockerfile and giving it a name
 docker build -t taxi_ingest:v001 .
 
@@ -8,11 +20,11 @@ docker build -t taxi_ingest:v001 .
 # of the previous builded local image
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz"
 docker run -it \
-  --network=pg-network \
+  --network=backend \
   taxi_ingest:v001 \
     --user=root \
     --password=root \
-    --host=pg-database \
+    --host=pgdatabase \
     --port=5432 \
     --db=ny_taxi \
     --table_name=yellow_taxi_data \
