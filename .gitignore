@@ -170,4 +170,5 @@ cython_debug/
 week1/homework/terraform/*
 week1/homework/terraform/keys/**
 week1/homework/terraform/.terraform
+week1/terraform/*
 !*.tf
