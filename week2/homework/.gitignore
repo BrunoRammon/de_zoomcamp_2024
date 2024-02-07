@@ -169,10 +169,13 @@ node_modules
 scratch*
 /mage_data*
 *secrets*.json
-magic-zoomcamp
-!*/magic-zoomcamp/data_loaders/load_green_taxi.py
-!magic-zoomcamp/transformers/transform_green_taxi.py
-!magic-zoomcamp/data_exporters/data_to_postgres.py
-!magic-zoomcamp/data_exporters/data_to_gcs.py
+magic-zoomcamp/*
+!magic-zoomcamp/transformers/
+!magic-zoomcamp/data_exporters/
+!magic-zoomcamp/data_loaders/
+# !*.py
+# !magic-zoomcamp/**/transform_green_taxi.py
+# !magic-zoomcamp/data_exporters/data_to_postgres.py
+# !magic-zoomcamp/data_exporters/data_to_gcs.py
 *.json
 
