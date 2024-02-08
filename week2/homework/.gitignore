@@ -173,6 +173,8 @@ magic-zoomcamp/*
 !magic-zoomcamp/transformers/
 !magic-zoomcamp/data_exporters/
 !magic-zoomcamp/data_loaders/
+!magic-zoomcamp/pipelines/
+magic-zoomcamp/pipelines/example_pipeline/
 magic-zoomcamp/data_exporters/export_titanic_clean.py
 magic-zoomcamp/data_loaders/load_titanic.py
 magic-zoomcamp/transformers/fill_in_missing_values.py
