@@ -172,3 +172,4 @@ week1/homework/terraform/keys/**
 week1/homework/terraform/.terraform
 week1/terraform/*
 !*.tf
+*dbt-bigquery-414121-7248c231e466.json
