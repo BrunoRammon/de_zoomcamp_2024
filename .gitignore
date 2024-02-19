@@ -162,9 +162,9 @@ cython_debug/
 
 *_postgres_data
 */terraform/keys/*
-*.csv
-*.csv.gz
-*.parquet
+*.csv*
+*.parquet*
+*_SUCCESS*
 
 # terraform
 week1/homework/terraform/*
